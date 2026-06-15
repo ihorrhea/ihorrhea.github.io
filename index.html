@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Wedding of Ihor &amp; Rhea Mae · April 11, 2027 · Cag Olango, Eastern Samar">
+<meta name="description" content="Wedding of Ihor &amp; Rhea Mae · April 11, 2027 · Balangiga, Eastern Samar">
 <title>Ihor &amp; Rhea Mae · 11 April 2027</title>
 <!--
   AUDIO  → put music.mp3 in repo root
@@ -402,6 +402,79 @@ footer{background:var(--olive);padding:4.5rem 1.5rem;text-align:center;position:
   .hero-dn-line,.seal-svg{animation:none;}
   .char-inner{animation:none!important;transform:none!important;}
 }
+
+
+
+/* ── GIFTS ──────────────────────────────────────── */
+#gifts{ text-align:center; }
+.gift-big-icon{
+  width:58px;height:58px;margin:0 auto 1rem;
+  color:var(--gold);opacity:.8;
+}
+.gift-title{
+  font-family:var(--serif);font-style:italic;font-weight:300;
+  font-size:clamp(2.5rem,6vw,4rem);color:var(--olive);
+  line-height:1;margin-bottom:.2rem;
+}
+.gift-intro{
+  font-size:clamp(.86rem,1.8vw,1rem);color:var(--soft);
+  line-height:1.9;max-width:500px;margin:1.4rem auto 1rem;
+}
+.gift-love{
+  font-family:var(--serif);font-style:italic;
+  font-size:clamp(1.15rem,2.5vw,1.55rem);
+  color:var(--olive-m);display:block;margin:.6rem 0 2.2rem;
+}
+.gift-row{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:12px;max-width:480px;margin:0 auto;
+}
+@media(max-width:480px){.gift-row{grid-template-columns:1fr;max-width:320px;}}
+
+.gift-card{
+  background:var(--cream);
+  border:1px solid rgba(40,56,15,.14);
+  padding:2rem 1.4rem 1.6rem;
+  text-align:center;cursor:pointer;
+  min-height:150px;
+  display:flex;align-items:center;justify-content:center;
+  transition:border-color .3s, box-shadow .3s;
+  position:relative;
+}
+.gift-card:hover{
+  border-color:rgba(184,130,16,.45);
+  box-shadow:0 6px 20px rgba(40,56,15,.07);
+}
+.gift-locked,.gift-open{ width:100%; }
+.gift-open{ display:none;flex-direction:column;align-items:center;gap:.35rem; }
+.gift-card.revealed .gift-locked{ display:none; }
+.gift-card.revealed .gift-open{ display:flex; }
+
+.gift-locked{ display:flex;flex-direction:column;align-items:center;gap:.55rem; }
+.gift-lock-icon{ color:var(--olive-m);opacity:.45;width:26px;height:26px; }
+.gift-method{
+  font-size:.54rem;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--olive-l);display:block;
+}
+.gift-tap{
+  font-size:.7rem;color:var(--soft);
+  font-family:var(--serif);font-style:italic;
+}
+.gift-number{
+  font-family:var(--serif);font-size:1.08rem;font-weight:400;
+  color:var(--olive);display:block;margin:.15rem 0;
+}
+.gift-name{font-size:.72rem;color:var(--soft);display:block;}
+.gift-copy{
+  margin-top:.7rem;padding:.35rem .8rem;
+  background:transparent;border:1px solid rgba(40,56,15,.18);
+  color:var(--olive-m);font-family:var(--sans);
+  font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;
+  cursor:pointer;transition:all .2s;border-radius:2px;
+}
+.gift-copy:hover{background:var(--olive);color:#fff;border-color:var(--olive);}
+.gift-copy.copied{background:var(--olive-l);color:#fff;border-color:var(--olive-l);}
+
 </style>
 </head>
 <body>
@@ -482,7 +555,7 @@ footer{background:var(--olive);padding:4.5rem 1.5rem;text-align:center;position:
       <div class="hl gr"></div>
     </div>
 
-    <span class="hero-loc" data-key="hero-loc">Cag Olango bgy, Eastern Samar</span>
+    <span class="hero-loc" data-key="hero-loc">Cag Olango, Eastern Samar</span>
 
     <a href="#invite" class="hero-dn" aria-label="Scroll">
       <div class="hero-dn-line"></div>
@@ -525,7 +598,7 @@ footer{background:var(--olive);padding:4.5rem 1.5rem;text-align:center;position:
         <svg class="d-icon" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="16" stroke="currentColor" stroke-width="1.5"/><circle cx="22" cy="22" r="2" fill="currentColor"/><path d="M22 12v10l7 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
         <span class="d-lbl" data-key="d-time-lbl">Oras</span>
         <span class="d-fixed-tl" data-key="d-time-desc">Hapon</span>
-        <span class="d-val">4:00 PM</span>
+        <span class="d-val">3:00 PM</span>
         <span class="d-sub">PHT &middot; UTC+8</span>
       </div>
 
@@ -535,7 +608,7 @@ footer{background:var(--olive);padding:4.5rem 1.5rem;text-align:center;position:
         <span class="d-lbl" data-key="d-ven-lbl">Lugar</span>
         <span class="d-fixed-tl" data-key="d-ven-desc">Lugar ng pagdiriwang</span>
         <span class="d-val">Barangay Hall</span>
-        <span class="d-sub">Cag Olango Bgy, Eastern Samar</span>
+        <span class="d-sub">Cag Olango, Eastern Samar</span>
         <div class="map-actions">
           <a class="map-btn map-google" href="https://maps.app.goo.gl/GRtgm44PgibqpYAa9" target="_blank" rel="noopener" onclick="event.stopPropagation()">Google Maps</a>
           <a class="map-btn map-apple" href="https://maps.apple.com/p/Y4NUiK04HGcsPf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Apple Maps</a>
@@ -608,6 +681,78 @@ footer{background:var(--olive);padding:4.5rem 1.5rem;text-align:center;position:
 
 <div class="tile-div"></div>
 
+<!-- GIFTS / MGA REGALO -->
+<div class="tile-div pa"></div>
+<section id="gifts" style="background:var(--parch)">
+  <div class="sc" style="max-width:560px;padding-bottom:5rem">
+
+    <span class="eyebrow" data-r data-key="gift-eyebrow">Wedding Registry</span>
+    <div class="orn-row" data-r data-d="1">
+      <div class="ol"></div><div class="od"></div><div class="or"></div>
+    </div>
+
+    <!-- hibiscus / gift icon -->
+    <svg class="gift-big-icon" data-r data-d="1" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <g transform="translate(29,29)">
+        <path d="M0,-22 C-7,-15 -7,-4 0,0 C7,-4 7,-15 0,-22Z" fill="currentColor" opacity=".18" stroke="currentColor" stroke-width="1.1"/>
+        <path d="M0,-22 C-7,-15 -7,-4 0,0 C7,-4 7,-15 0,-22Z" fill="currentColor" opacity=".18" stroke="currentColor" stroke-width="1.1" transform="rotate(72)"/>
+        <path d="M0,-22 C-7,-15 -7,-4 0,0 C7,-4 7,-15 0,-22Z" fill="currentColor" opacity=".18" stroke="currentColor" stroke-width="1.1" transform="rotate(144)"/>
+        <path d="M0,-22 C-7,-15 -7,-4 0,0 C7,-4 7,-15 0,-22Z" fill="currentColor" opacity=".18" stroke="currentColor" stroke-width="1.1" transform="rotate(216)"/>
+        <path d="M0,-22 C-7,-15 -7,-4 0,0 C7,-4 7,-15 0,-22Z" fill="currentColor" opacity=".18" stroke="currentColor" stroke-width="1.1" transform="rotate(288)"/>
+        <circle r="4.5" fill="currentColor"/>
+      </g>
+    </svg>
+
+    <h2 class="gift-title" data-r data-d="1" data-key="gift-h2"><em>Gifts</em></h2>
+
+    <p class="gift-intro" data-r data-d="2" data-key="gift-intro">
+      Your presence is the best gift we could receive.
+      However, if you wish to contribute to our new life together,
+      you can do so via GCash or PayPal.
+    </p>
+
+    <span class="gift-love" data-r data-d="2" data-key="gift-love">With all our love</span>
+
+    <div class="gift-row" data-r data-d="3">
+
+      <!-- GCash -->
+      <div class="gift-card" id="gc-card" onclick="revealGift('gc-card')">
+        <div class="gift-locked">
+          <svg class="gift-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/>
+          </svg>
+          <span class="gift-method">GCash</span>
+          <span class="gift-tap" data-key="gift-tap">Tap to reveal</span>
+        </div>
+        <div class="gift-open">
+          <span class="gift-method">GCash</span>
+          <span class="gift-number" id="gcash-num">+63 966 148 1805</span>
+          <span class="gift-name">Rhea Mae B. Elacion</span>
+          <button class="gift-copy" onclick="event.stopPropagation();copyDetail('gcash-num',this)" data-key="gift-copy">Copy</button>
+        </div>
+      </div>
+
+      <!-- PayPal -->
+      <div class="gift-card" id="pp-card" onclick="revealGift('pp-card')">
+        <div class="gift-locked">
+          <svg class="gift-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/>
+          </svg>
+          <span class="gift-method">PayPal</span>
+          <span class="gift-tap" data-key="gift-tap">Tap to reveal</span>
+        </div>
+        <div class="gift-open">
+          <span class="gift-method">PayPal</span>
+          <span class="gift-number" id="paypal-link">ihor.yasnytskyi@gmail.com</span>
+          <button class="gift-copy" onclick="event.stopPropagation();copyDetail('paypal-link',this)" data-key="gift-copy">Copy</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 <!-- RSVP -->
 <section id="rsvp" style="background:var(--parch)">
   <div class="sn" style="max-width:560px">
@@ -670,11 +815,12 @@ footer{background:var(--olive);padding:4.5rem 1.5rem;text-align:center;position:
 
 <div class="tile-div"></div>
 
+
 <!-- FOOTER -->
 <footer>
   <div class="ft-bar"></div>
   <p class="ft-names">IHOR <span class="ft-and">&amp;</span> RHEA MAE</p>
-  <span class="ft-date" data-key="ft-date">11 Abril 2027 &nbsp;&middot;&nbsp; Cag Olango Bgy, Eastern Samar</span>
+  <span class="ft-date" data-key="ft-date">11 Abril 2027 &nbsp;&middot;&nbsp; Cag Olango, Eastern Samar</span>
   <span class="ft-love" data-key="ft-love">Sa pagmamahal, ang inyong mga bagong kasal</span>
 </footer>
 
@@ -685,7 +831,7 @@ const T={
     'open-hint':'Buksan \u00b7 Open',
     'hero-tag':'Inaanyayahan Kayo','hero-mon':'ABR',
     'hero-sub-label':'Kami ay magpapakasal',
-    'hero-loc':'Cag Olango Bgy., Eastern Samar',
+    'hero-loc':'Cag Olango, Eastern Samar',
     'invite-eyebrow':'Imbitasyon',
     'invite-h2':'Samahan ninyo kami sa<br><em>aming espesyal na araw</em>',
     'invite-body':'Sa kagalakan ng aming puso,<br>inaanyayahan namin kayong maging saksi<br>sa aming pagmamahal at ipagdiwang<br>kasama kami ang <strong>aming pinakamahalagang araw.</strong>',
@@ -710,14 +856,18 @@ const T={
     'f-diet':'Dietary restrictions / Mga alerdyi',
     'f-msg':'Mensahe sa mag-asawa','f-btn':'Kumpirmahin ang Pagdalo',
     'ok-msg':'Salamat! Inaabangan naming makita kayo.',
-    'ft-date':'11 Abril 2027 \u00b7 Cag Olango Bgy., Eastern Samar',
+    'ft-date':'11 Abril 2027 \u00b7 Cag Olango, Eastern Samar',
     'ft-love':'Sa pagmamahal, ang inyong mga bagong kasal',
+    'gift-eyebrow':'Mga Regalo',
+    'gift-h2':'Pag-ibig &amp;<br><em>Mga Regalo</em>',
+    'gift-note':'Ang inyong pagdalo ay ang pinakamagandang regalo para sa amin.<br>Kung nais ninyong magbigay ng regalo, lubos kaming nagpapasalamat.',
+    'gift-copy':'Kopyahin',
   },
   en:{
     'open-hint':'Buksan \u00b7 Open',
     'hero-tag':'You Are Invited','hero-mon':'APR',
     'hero-sub-label':'We are getting married',
-    'hero-loc':'Cag Olango Bgy., Eastern Samar',
+    'hero-loc':'Cag Olango, Eastern Samar',
     'invite-eyebrow':'Invitation',
     'invite-h2':'Join us on our<br><em>most special day</em>',
     'invite-body':'With great joy in our hearts,<br>we invite you to witness our love<br>and celebrate with us on our<br><strong>most special day.</strong>',
@@ -742,25 +892,29 @@ const T={
     'f-diet':'Dietary restrictions / Allergies',
     'f-msg':'Message to the couple','f-btn':'Confirm Attendance',
     'ok-msg':"Thank you \u2014 we can't wait to celebrate with you!",
-    'ft-date':'April 11, 2027 \u00b7 Cag Olango Bgy., Eastern Samar',
+    'ft-date':'April 11, 2027 \u00b7 Cag Olango, Eastern Samar',
     'ft-love':'With love, your soon-to-be newlyweds',
+    'gift-eyebrow':'Gifts',
+    'gift-h2':'Love &amp;<br><em>Gifts</em>',
+    'gift-note':'Your presence is our greatest gift. If you wish to give an additional gift, we are truly grateful.',
+    'gift-copy':'Copy',
   }
 };
 
 const PROGRAM={
   tl:[
-    {time:'15:00',name:'Pagtanggap ng mga Bisita',note:'Inumin at merienda'},
-    {time:'16:00',name:'Seremonya ng Kasalan',note:'Pagpapalitan ng mga pangako'},
-    {time:'17:00',name:'Sesi ng Litrato',note:'Litrato ng mag-asawa at pamilya'},
-    {time:'18:00',name:'Handaan at Bangkete',note:'Hapunan, toast, at musika'},
-    {time:'20:00',name:'Sayawan at Selebrasyon',note:'DJ set at pagdiriwang'},
+    {time:'14:30',name:'Pagtanggap ng mga Bisita',note:'Inumin at merienda'},
+    {time:'14:30',name:'Seremonya ng Kasalan',note:'Pagpapalitan ng mga pangako'},
+    {time:'14:30',name:'Sesi ng Litrato',note:'Litrato ng mag-asawa at pamilya'},
+    {time:'14:30',name:'Handaan at Bangkete',note:'Hapunan, toast, at musika'},
+    {time:'19:00',name:'Sayawan at Selebrasyon',note:'DJ set at pagdiriwang'},
   ],
   en:[
-    {time:'15:00',name:'Guest Reception',note:'Welcome drinks & light bites'},
-    {time:'16:00',name:'Wedding Ceremony',note:'Exchange of vows'},
-    {time:'17:00',name:'Photo Session',note:'Couple & family portraits'},
-    {time:'18:00',name:'Dinner Reception',note:'Dinner, toasts & live music'},
-    {time:'20:00',name:'Party & Dancing',note:'DJ & celebration'},
+    {time:'14:30',name:'Guest Reception',note:'Welcome drinks & light bites'},
+    {time:'14:30',name:'Wedding Ceremony',note:'Exchange of vows'},
+    {time:'14:30',name:'Photo Session',note:'Couple & family portraits'},
+    {time:'14:30',name:'Dinner Reception',note:'Dinner, toasts & live music'},
+    {time:'19:00',name:'Party & Dancing',note:'DJ & celebration'},
   ]
 };
 
@@ -860,7 +1014,7 @@ function renderTimeline(){
 
 /* ── COUNTDOWN ───────────────────────────────── */
 (function(){
-  const W=new Date('2027-04-11T16:00:00+08:00');
+  const W=new Date('2027-04-11T15:00:00+08:00');
   const D=document.getElementById('cd-d'),H=document.getElementById('cd-h'),
         M=document.getElementById('cd-m'),S=document.getElementById('cd-s');
   const p=n=>String(Math.max(0,n)).padStart(2,'0');
@@ -925,6 +1079,23 @@ document.querySelector('.hero-dn').addEventListener('click',e=>{
   e.preventDefault();
   document.getElementById('invite').scrollIntoView({behavior:'smooth'});
 });
+
+
+/* ── COPY GIFT DETAIL ──────────────────────────── */
+
+
+/* ── GIFTS ──────────────────────────────────── */
+function revealGift(id){
+  document.getElementById(id).classList.toggle('revealed');
+}
+function copyDetail(elId, btn){
+  const txt=document.getElementById(elId).textContent.trim();
+  navigator.clipboard.writeText(txt).then(()=>{
+    const orig=btn.textContent;
+    btn.classList.add('copied');btn.textContent='✓';
+    setTimeout(()=>{btn.classList.remove('copied');btn.textContent=T[lang]['gift-copy']||'Copy';},1800);
+  }).catch(()=>{});
+}
 
 /* ── INIT ────────────────────────────────────── */
 renderTimeline();
