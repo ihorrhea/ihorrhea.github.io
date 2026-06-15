@@ -840,8 +840,12 @@ setTimeout(scheduleObserve, 150);
   document.addEventListener('click',  tryAuto);
 
   // Also try on page load (works in some browsers)
-  audio.play().then(() => setState(true)).catch(() => setState(false));
-
+  //audio.play().then(() => setState(true)).catch(() => setState(false));
+audio.muted = true;
+audio.play().then(() => {
+  setTimeout(() => { audio.muted = false; setState(true); }, 300);
+}).catch(() => setState(false));
+  
   audio.addEventListener('play',  () => setState(true));
   audio.addEventListener('pause', () => setState(false));
 })();
