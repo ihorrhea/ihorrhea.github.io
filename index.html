@@ -427,16 +427,16 @@ footer{background:var(--olive);padding:4.5rem 1.5rem;text-align:center;position:
 }
 .gift-row{
   display:grid;grid-template-columns:1fr 1fr;
-  gap:12px;max-width:480px;margin:0 auto;
+  gap:14px;max-width:580px;margin:0 auto;
 }
-@media(max-width:480px){.gift-row{grid-template-columns:1fr;max-width:320px;}}
+@media(max-width:560px){.gift-row{grid-template-columns:1fr;max-width:340px;}}
 
 .gift-card{
   background:var(--cream);
   border:1px solid rgba(40,56,15,.14);
-  padding:2rem 1.4rem 1.6rem;
+  padding:1.8rem 1.2rem 1.6rem;
   text-align:center;cursor:pointer;
-  min-height:150px;
+  min-height:200px;
   display:flex;align-items:center;justify-content:center;
   transition:border-color .3s, box-shadow .3s;
   position:relative;
@@ -732,7 +732,7 @@ footer{background:var(--olive);padding:4.5rem 1.5rem;text-align:center;position:
         </div>
       </div>
 
-      <!-- PayPal -->
+      <!-- PayPal QR -->
       <div class="gift-card" id="pp-card" onclick="revealGift('pp-card')">
         <div class="gift-locked">
           <svg class="gift-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
@@ -743,8 +743,14 @@ footer{background:var(--olive);padding:4.5rem 1.5rem;text-align:center;position:
         </div>
         <div class="gift-open">
           <span class="gift-method">PayPal</span>
-          <span class="gift-number" id="paypal-link">ihor.yasnytskyi@gmail.com</span>
-          <button class="gift-copy" onclick="event.stopPropagation();copyDetail('paypal-link',this)" data-key="gift-copy">Copy</button>
+          <img src="paypal-qr.png"
+               alt="PayPal QR code"
+               style="width:170px;height:auto;display:block;margin:.5rem auto;image-rendering:crisp-edges;"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span style="display:none;font-size:.72rem;color:var(--soft);font-style:italic">
+            Upload paypal-qr.png to repo
+          </span>
+          <span class="gift-name" data-key="gift-scan">Scan with your camera to pay</span>
         </div>
       </div>
 
@@ -861,7 +867,7 @@ const T={
     'gift-eyebrow':'Mga Regalo',
     'gift-h2':'Pag-ibig &amp;<br><em>Mga Regalo</em>',
     'gift-note':'Ang inyong pagdalo ay ang pinakamagandang regalo para sa amin.<br>Kung nais ninyong magbigay ng regalo, lubos kaming nagpapasalamat.',
-    'gift-copy':'Kopyahin',
+    'gift-copy':'Kopyahin','gift-scan':'I-scan ang camera para magbayad',
   },
   en:{
     'open-hint':'Buksan \u00b7 Open',
@@ -897,7 +903,7 @@ const T={
     'gift-eyebrow':'Gifts',
     'gift-h2':'Love &amp;<br><em>Gifts</em>',
     'gift-note':'Your presence is our greatest gift. If you wish to give an additional gift, we are truly grateful.',
-    'gift-copy':'Copy',
+    'gift-copy':'Copy','gift-scan':'Scan with your camera to pay',
   }
 };
 
